@@ -27,6 +27,7 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    padding: 0
   },
   appBar: {
     transition: theme.transitions.create(['margin', 'width'], {
@@ -65,7 +66,6 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -138,10 +138,10 @@ function DefaultLayout() {
         </div>
         <Divider />
         <List>
-          <Link to="/test1"  className={classes.link}>
-            <ListItem button key={'Test1'}>
+          <Link to="/covid-tracker"  className={classes.link}>
+            <ListItem button key={'covid'}>
               <ListItemIcon>{<InboxIcon /> }</ListItemIcon>
-              <ListItemText primary={"Test1"} />
+              <ListItemText primary={"Covid Tracker"} />
             </ListItem>
           </Link>
           <Link to="/test2"  className={classes.link}>
@@ -172,7 +172,7 @@ function DefaultLayout() {
                 : (null);
             },
             )}
-            <Redirect from="/" to="/test1" />
+            <Redirect from="/" to="/covid-tracker" />
           </Switch>
       </main>
     </div>

@@ -8,7 +8,7 @@ class Test2 extends Component {
     }
     render() {
         return (
-            <div>
+            <div style={{backgroundColor: 'black'}}>
                 <p>{`Test2 ${this.props.initState}`}</p>
             </div>
         )

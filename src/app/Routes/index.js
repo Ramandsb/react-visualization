@@ -6,8 +6,8 @@ function Loading() {
     return <div>Loading...</div>;
 }
 
-const Test1 = Loadable({
-    loader: () => import('../Components/Test1'),
+const CovidTracker = Loadable({
+    loader: () => import('../Components/CovidTracker'),
     loading: Loading,
 });
 const Test2 = Loadable({
@@ -25,7 +25,7 @@ const Test4 = Loadable({
 
 const routes = [
     { path: '/', exact: true, name: 'Home', component: DefaultLayout },
-    { path: '/Test1', exact: true, name: 'Test1', component: Test1 },
+    { path: '/covid-tracker', exact: true, name: 'covid-tracker', component: CovidTracker },
     { path: '/Test2', exact: true, name: 'Test2', component: Test2 },
     { path: '/Test3', exact: true, name: 'Test3', component: Test3 },
     { path: '/Test4', exact: true, name: 'Test4', component: Test4 },
