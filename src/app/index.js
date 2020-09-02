@@ -4,14 +4,14 @@ import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 import rootReducer from '../reducers'
-import TestComponent from './TestComponent';
+import TestComponent from './Components/TestComponent';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
-import Page404 from './Page404/Page404';
+import Page404 from './Components/Page404/Page404';
+import DefaultLayout from './Components/DefaultLayout';
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger))
 window.store = store
@@ -20,10 +20,7 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-        <Switch>
-          <Route exact path="/" component={TestComponent} />
-          <Route path='/*' component={Page404} />
-        </Switch>
+        <DefaultLayout />
       </Router>
     </Provider>
   );
