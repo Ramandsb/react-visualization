@@ -1,4 +1,5 @@
 import * as types from './actionTypes'
+import data from "../data/places.json"
 
 const updateTestState = ({ initState }) => ({
     type: types.CHANGE_STATE,
@@ -13,6 +14,18 @@ export function fetchDataToChangeState(data) {
                 //any api calls
                 dispatch(updateTestState({ initState: data }))
                 resolve()
+            } catch (err) {
+                console.log(err)
+                reject(err)
+            }
+        })
+    }
+}
+export function fetchWorldMapLocations() {
+    return (dispatch, getState) => {
+        return new Promise(async (resolve, reject) => {
+            try {
+                resolve(data)
             } catch (err) {
                 console.log(err)
                 reject(err)

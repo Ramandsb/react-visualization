@@ -1,0 +1,25 @@
+.marker {
+    background-Color: rgba(255,65,108,0.1);
+    border-radius: 50px;
+}
+.marker:hover {
+    background-color: rgba(255,65,108,0.5);
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.country {
+    font-weight: 700;
+}
+.countryHead {
+    font-weight: 700;
+    font-size: large;
+}
