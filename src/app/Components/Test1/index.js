@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchDataToChangeState } from '../../actions'
+import { fetchDataToChangeState } from '../../../actions'
 
-class TestComponent extends Component {
+class Test1 extends Component {
     componentDidMount = async () => {
-        await this.props.fetchDataToChangeState('or change anything')
+        await this.props.fetchDataToChangeState("Testing")
     }
     render() {
         return (
             <div>
-                <p>{`TestComponent ${this.props.initState}`}</p>
+                <p>{`Test1 ${this.props.initState}`}</p>
             </div>
         )
     }
@@ -27,4 +27,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(TestComponent)
+)(Test1)
